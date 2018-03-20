@@ -4,7 +4,7 @@ public class Pachet {
 
   protected int status;
 
-  protected Vector<Item> Produse;
+  protected Vector<Item> produse;
 
   private int pretPachet;
 
@@ -25,9 +25,9 @@ public class Pachet {
 
   }
 
-  public Pachet(int status, Vector<Item> produse, int pretPachet, int ID, Vector myItem) {
-    this.status = status;
-    Produse = produse;
+  public Pachet(Vector<Item> produse) {
+    this.status = 0;
+    this.produse = produse;
     this.pretPachet = pretPachet;
     this.ID = ID;
   }
@@ -37,11 +37,11 @@ public class Pachet {
   }
 
   public Vector<Item> getProduse() {
-    return Produse;
+    return produse;
   }
 
   public void setProduse(Vector<Item> produse) {
-    Produse = produse;
+    produse = produse;
   }
 
   public int getPretPachet() {
