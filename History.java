@@ -1,21 +1,40 @@
-import java.util.Vector;
+package p1;
 
 public class History {
 
-    /**
-   * 
-   * @element-type Comanda
-   */
-  public Vector  myComanda;
+    public static History onlyOne;
+
+    private static History instance = null;
+    protected History() {
+            // Exists only to defeat instantiation.
+    }
+
+    public static History getInstance() {
+            if(instance == null) {
+                instance = new History();
+
+            }
+            return instance;
+    }
+
+
+
+    private Vector<Comanda> myComanda;
     public User myUser;
 
-  public void listAllComenzi() {
-  }
+    public void listallComenzi(){
 
-  public void listComanda( index) {
-  }
+        for(Comanda i : myComanda)
+            System.out.println(i.getID());
 
-  public void detaliiComanda( index) {
-  }
+    }
+
+    public void listcomanda(int index){
+        System.out.println();
+    }
+
+    public void detaliiComanda(int index){
+
+    }
 
 }
