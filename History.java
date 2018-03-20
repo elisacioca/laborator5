@@ -3,6 +3,8 @@ import java.util.Vector;
 
 public class History {
 
+    private Vector<Comanda> myComanda;
+    public User myUser;
     public static History onlyOne;
 
     private static History instance = null;
@@ -19,9 +21,13 @@ public class History {
     }
 
 
+    public void remove(Comanda x){
+        for(Comanda i : myComanda)
+            if(i.getID() == x.getID())
+                myComanda.remove(i);
 
-    private Vector<Comanda> myComanda;
-    public User myUser;
+    }
+
 
     public void listallComenzi(){
 
