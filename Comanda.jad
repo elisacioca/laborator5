@@ -1,0 +1,26 @@
+// Decompiled by Jad v1.5.8f. Copyright 2001 Pavel Kouznetsov.
+// Jad home page: http://www.kpdus.com/jad.html
+// Decompiler options: packimports(3) 
+// Source File Name:   Comanda.java
+
+import java.util.Vector;
+
+public class Comanda
+{
+
+    public Comanda()
+    {
+    }
+
+    public void newOperation()
+    {
+    }
+
+    public String dataPlasare;
+    public String dataLivrare;
+    public int ID;
+    public String curier;
+    public int pretTotal;
+    public Vector myPachet;
+    public History myHistory;
+}
