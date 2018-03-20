@@ -25,7 +25,7 @@ public class Pachet {
 
   }
 
-  public Pachet(Vector<Item> produse) {
+  public Pachet(Vector<Item> produse,int pretPachet, int ID) {
     this.status = 0;
     this.produse = produse;
     this.pretPachet = pretPachet;
@@ -58,6 +58,12 @@ public class Pachet {
 
   public void setID(int ID) {
     this.ID = ID;
+  }
+
+  public void addItem(Vector<Item> item){
+    for(int i= 0 ; i< item.size(); i++){
+      produse.add(item.get(i));
+    }
   }
 
 }
